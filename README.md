@@ -1,6 +1,18 @@
 # FillBlankTextView
 
-![Image](./screenshot_01.png)
+<br>
+<p align="center">
+<img src="./screenshot_01.png" width="400"/>
+</p>
+
+<br>
+
+<p align="center">
+<a href="https://jitpack.io/#Vinx911/FillBlankTextView"><img src="https://jitpack.io/v/Vinx911/FillBlankTextView.svg"/></a>
+<img src="https://img.shields.io/badge/language-kotlin-orange.svg"/>
+<img src="https://img.shields.io/badge/license-Apache-blue"/>
+<br>
+<br>
 
 FillBlankTextView 基于TextView实现填空文本控件。
 
