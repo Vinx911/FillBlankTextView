@@ -323,26 +323,26 @@ class FillBlankTextView @JvmOverloads constructor(
         val ta = context.obtainStyledAttributes(attrs, R.styleable.FillBlankTextView)
         try {
             blankTextColor = ta.getColor(
-                R.styleable.FillBlankTextView_fbtv_blankTextColor,
+                R.styleable.FillBlankTextView_fbtvBlankTextColor,
                 blankTextColor
             )
 
             blankTextSelectColor = ta.getColor(
-                R.styleable.FillBlankTextView_fbtv_blankTextSelectColor,
+                R.styleable.FillBlankTextView_fbtvBlankTextSelectColor,
                 blankTextSelectColor
             )
 
             blankUnderlineColor = ta.getColor(
-                R.styleable.FillBlankTextView_fbtv_blankUnderlineColor,
+                R.styleable.FillBlankTextView_fbtvBlankUnderlineColor,
                 blankUnderlineColor
             )
 
             blankUnderlineSelectColor = ta.getColor(
-                R.styleable.FillBlankTextView_fbtv_blankTextSelectColor,
+                R.styleable.FillBlankTextView_fbtvBlankTextSelectColor,
                 blankUnderlineSelectColor
             )
 
-            when (ta.getInt(R.styleable.FillBlankTextView_fbtv_blankEllipsize, ELLIPSIZE_NOT_SET)) {
+            when (ta.getInt(R.styleable.FillBlankTextView_fbtvBlankEllipsize, ELLIPSIZE_NOT_SET)) {
                 ELLIPSIZE_DEFAULT -> blankEllipsize = TextUtils.TruncateAt.END
                 ELLIPSIZE_START -> blankEllipsize = TextUtils.TruncateAt.START
                 ELLIPSIZE_MIDDLE -> blankEllipsize = TextUtils.TruncateAt.MIDDLE
@@ -351,29 +351,29 @@ class FillBlankTextView @JvmOverloads constructor(
             }
 
             blankUnderlineWidth = ta.getDimension(
-                R.styleable.FillBlankTextView_fbtv_blankEllipsize,
+                R.styleable.FillBlankTextView_fbtvBlankEllipsize,
                 blankUnderlineWidth
             )
 
-            blankBackground = ta.getDrawable(R.styleable.FillBlankTextView_fbtv_blankBackground)
+            blankBackground = ta.getDrawable(R.styleable.FillBlankTextView_fbtvBlankBackground)
 
             blankBackgroundOffsetLeft = ta.getDimension(
-                R.styleable.FillBlankTextView_fbtv_blankBackgroundOffsetLeft,
+                R.styleable.FillBlankTextView_fbtvBlankBackgroundOffsetLeft,
                 blankBackgroundOffsetLeft.toFloat()
             ).toInt()
 
             blankBackgroundOffsetTop = ta.getDimension(
-                R.styleable.FillBlankTextView_fbtv_blankBackgroundOffsetTop,
+                R.styleable.FillBlankTextView_fbtvBlankBackgroundOffsetTop,
                 blankBackgroundOffsetTop.toFloat()
             ).toInt()
 
             blankBackgroundOffsetRight = ta.getDimension(
-                R.styleable.FillBlankTextView_fbtv_blankBackgroundOffsetRight,
+                R.styleable.FillBlankTextView_fbtvBlankBackgroundOffsetRight,
                 blankBackgroundOffsetRight.toFloat()
             ).toInt()
 
             blankBackgroundOffsetBottom = ta.getDimension(
-                R.styleable.FillBlankTextView_fbtv_blankBackgroundOffsetBottom,
+                R.styleable.FillBlankTextView_fbtvBlankBackgroundOffsetBottom,
                 blankBackgroundOffsetBottom.toFloat()
             ).toInt()
         } finally {

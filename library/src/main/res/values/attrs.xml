@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="FillBlankTextView">
-        <attr name="fbtv_blankTextColor" format="color" />
-        <attr name="fbtv_blankTextSelectColor" format="color" />
-        <attr name="fbtv_blankEllipsize">
+        <attr name="fbtvBlankTextColor" format="color" />
+        <attr name="fbtvBlankTextSelectColor" format="color" />
+        <attr name="fbtvBlankEllipsize">
             <enum name="start" value="0" />
             <enum name="middle" value="1" />
             <enum name="end" value="2" />
             <enum name="marquee" value="3" />
         </attr>
-        <attr name="fbtv_blankUnderlineColor" format="color" />
-        <attr name="fbtv_blankUnderlineSelectColor" format="color" />
-        <attr name="fbtv_blankUnderlineWidth" format="dimension" />
-        <attr name="fbtv_blankBackground" format="reference" />
-        <attr name="fbtv_blankBackgroundOffsetLeft" format="dimension" />
-        <attr name="fbtv_blankBackgroundOffsetTop" format="dimension" />
-        <attr name="fbtv_blankBackgroundOffsetRight" format="dimension" />
-        <attr name="fbtv_blankBackgroundOffsetBottom" format="dimension" />
+        <attr name="fbtvBlankUnderlineColor" format="color" />
+        <attr name="fbtvBlankUnderlineSelectColor" format="color" />
+        <attr name="fbtvBlankUnderlineWidth" format="dimension" />
+        <attr name="fbtvBlankBackground" format="reference" />
+        <attr name="fbtvBlankBackgroundOffsetLeft" format="dimension" />
+        <attr name="fbtvBlankBackgroundOffsetTop" format="dimension" />
+        <attr name="fbtvBlankBackgroundOffsetRight" format="dimension" />
+        <attr name="fbtvBlankBackgroundOffsetBottom" format="dimension" />
     </declare-styleable>
 </resources>
