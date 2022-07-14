@@ -120,7 +120,7 @@ class FillBlankTextView @JvmOverloads constructor(
     /**
      * 空下划线颜色
      */
-    var blankUnderlineColor: Int = Color.GREEN
+    var blankUnderlineColor: Int = Color.BLACK
         set(value) {
             field = value
 
@@ -130,7 +130,7 @@ class FillBlankTextView @JvmOverloads constructor(
     /**
      * 空下划线颜色
      */
-    var blankUnderlineSelectColor: Int = Color.BLUE
+    var blankUnderlineSelectColor: Int = Color.BLACK
         set(value) {
             field = value
 
@@ -140,7 +140,7 @@ class FillBlankTextView @JvmOverloads constructor(
     /**
      * 空下划线宽度
      */
-    var blankUnderlineWidth: Float = 2f
+    var blankUnderlineWidth: Float = 3f
         set(value) {
             field = value
 

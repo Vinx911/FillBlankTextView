@@ -34,7 +34,7 @@ class ReplaceSpan(val blankText: String) : ReplacementSpan() {
     /**
      * 下划线颜色
      */
-    var underlineColor: Int = Color.RED
+    var underlineColor: Int = Color.BLACK
 
     /**
      * 背景
@@ -64,7 +64,7 @@ class ReplaceSpan(val blankText: String) : ReplacementSpan() {
     /**
      * 下划线宽度
      */
-    var underlineWidth: Float = 2f
+    var underlineWidth: Float = 3f
 
     /**
      * 附加数据
