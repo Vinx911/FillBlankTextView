@@ -177,7 +177,7 @@ compileOptions {
 ## 版本记录
 
 #### v1.0.0：2022-7-14
-* 参考https://github.com/TMLAndroid/FillBlankDemo实现
+* 参考[TMLAndroid/FillBlankDemo](https://github.com/TMLAndroid/FillBlankDemo)实现
 
 #### v1.0.1：2022-7-14
 
