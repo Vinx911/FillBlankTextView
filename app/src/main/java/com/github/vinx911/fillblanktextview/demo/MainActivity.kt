@@ -1,4 +1,4 @@
-package cn.vinshell.widget.fillblanktextview.demo
+package com.github.vinx911.fillblanktextview.demo
 
 import android.graphics.Color
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import cn.vinshell.widget.FillBlankTextView
+import com.github.vinx911.FillBlankTextView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var fillBlankTextView: FillBlankTextView

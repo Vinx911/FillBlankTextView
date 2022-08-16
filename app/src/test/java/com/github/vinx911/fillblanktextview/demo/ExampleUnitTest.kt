@@ -1,4 +1,4 @@
-package cn.vinshell.widget
+package com.github.vinx911.fillblanktextview.demo
 
 import org.junit.Test
 

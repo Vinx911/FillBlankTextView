@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.vinshell.widget.fillblanktextview
+package com.github.vinx911.fillblanktextview
 
 import android.graphics.Canvas
 import android.graphics.Color

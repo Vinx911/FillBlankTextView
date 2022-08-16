@@ -1,4 +1,4 @@
-package cn.vinshell.widget.fillblanktextview.demo
+package com.github.vinx911.fillblanktextview.demo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("cn.vinshell.widget.fillblanktextview.demo", appContext.packageName)
+        assertEquals("com.github.vinx911.fillblanktextview.demo", appContext.packageName)
     }
 }

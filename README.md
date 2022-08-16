@@ -85,7 +85,7 @@ implementation 'com.github.Vinx911:FillBlankTextView:1.0.1'
 布局示例
 
 ```Xml
-<cn.vinshell.widget.FillBlankTextView
+<com.github.vinx911.FillBlankTextView
     android:id="@+id/tv_fill_blank"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

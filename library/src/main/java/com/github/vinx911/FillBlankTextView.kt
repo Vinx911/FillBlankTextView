@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.vinshell.widget
+package com.github.vinx911
 
 import android.content.Context
 import android.graphics.Color
@@ -32,8 +32,8 @@ import android.widget.EditText
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
-import cn.vinshell.widget.fillblanktextview.ImmFocus
-import cn.vinshell.widget.fillblanktextview.ReplaceSpan
+import com.github.vinx911.fillblanktextview.ImmFocus
+import com.github.vinx911.fillblanktextview.ReplaceSpan
 
 
 @Suppress("MemberVisibilityCanBePrivate", "unused")
