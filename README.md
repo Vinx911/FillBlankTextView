@@ -27,7 +27,7 @@ FillBlankTextView 基于TextView实现填空文本控件。
 
 
 
-## FillBlankTextView属性说明
+## FillBlankTextView XML属性说明
 
 为防止属性名冲突，添加fbtv前缀
 
@@ -44,6 +44,30 @@ FillBlankTextView 基于TextView实现填空文本控件。
 | fbtvBlankBackgroundOffsetTop    | dimension | 0      | 空背景上偏移，向外为正，向内为负<br/>blankBackgroundOffsetTop<br/>setBlankBackgroundOffset() |
 | fbtvBlankBackgroundOffsetRight  | dimension | 0      | 空背景右偏移，向外为正，向内为负<br/>blankBackgroundOffsetRight<br/>setBlankBackgroundOffset() |
 | fbtvBlankBackgroundOffsetBottom | dimension | 0      | 空背景下偏移，向外为正，向内为负<br/>blankBackgroundOffsetBottom<br/>setBlankBackgroundOffset() |
+
+
+
+## FillBlankTextView属性说明
+
+Java调用请使用getter/setter
+
+| 属性                        | 值类型       | 默认值         | 说明                                                         |
+| :-------------------------- | :----------- | :------------- | :----------------------------------------------------------- |
+| text                        | CharSequence |                | 文本                                                         |
+| answerList                  | List<String> |                | 答案列表，仅有getter                                         |
+| blankTextColor              | Int          | Color.BLACK    | 扫描区外遮罩的颜色                                           |
+| blankTextSelectColor        | Int          | Color.BLACK    | 空文本选中颜色                                               |
+| blankEllipsize              | TruncateAt   | TruncateAt.END | 扫描区边角的颜色                                             |
+| blankUnderlineColor         | Int          | Color.BLACK    | 空下划线颜色                                                 |
+| blankUnderlineSelectColor   | Int          | Color.BLACK    | 空下划线选中颜色                                             |
+| blankUnderlineWidth         | Float        | 3f             | 空下划线宽度                                                 |
+| blankBackground             | drawable     | null           | 空背景                                                       |
+| blankBackgroundOffsetLeft   | Int          | 0              | 空背景左偏移，向外为正，向内为负<br/>setBlankBackgroundOffset() |
+| blankBackgroundOffsetTop    | Int          | 0              | 空背景上偏移，向外为正，向内为负<br/>setBlankBackgroundOffset() |
+| blankBackgroundOffsetRight  | Int          | 0              | 空背景右偏移，向外为正，向内为负<br/>setBlankBackgroundOffset() |
+| blankBackgroundOffsetBottom | Int          | 0              | 空背景下偏移，向外为正，向内为负<br/>setBlankBackgroundOffset() |
+| inputCompleteDelay          | Long         | 500            | 输入完成延时（毫秒）                                         |
+| onAnswerChangedListener     |              | null           | 答案改变监听器                                               |
 
 
 

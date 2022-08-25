@@ -226,6 +226,16 @@ class FillBlankTextView @JvmOverloads constructor(
         }
 
     /**
+     * 输入完成延时（毫秒）
+     */
+    var inputCompleteDelay = 500L
+
+    /**
+     * 答案改变监听器
+     */
+    var onAnswerChangedListener: OnAnswerChangedListener? = null
+
+    /**
      * 处理点击事件
      */
     private val linkMovementMethod = object : LinkMovementMethod() {
@@ -275,12 +285,17 @@ class FillBlankTextView @JvmOverloads constructor(
         val spanRect = getSpanRect(span) ?: return@OnClickListener
         val answer = editText.text.toString()
         setAnswer(oldSpanId, answer)
+        spanList.getOrNull(oldSpanId)?.isShow = true
         oldSpanId = index
         editText.setText(span.spanText)
         editText.setSelection(span.spanText.length)
-        span.spanText = ""
+        span.isShow = false
         setEditTextPosition(spanRect)
         setSpanChecked(index)
+    }
+
+    private val editInputRun = Runnable {
+        onAnswerChangedListener?.onAnswerChangedListener()
     }
 
     init {
@@ -323,13 +338,20 @@ class FillBlankTextView @JvmOverloads constructor(
 
         editText.addTextChangedListener {
             updateTextReplacedBySpan(oldSpanId, it.toString())
+
+            //延迟500ms，如果不再输入字符，则执行该线程的run方法
+            handler.removeCallbacks(editInputRun)
+            handler.postDelayed(editInputRun, inputCompleteDelay)
         }
 
         editText.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 setAnswer(oldSpanId, editText.text.toString())
+                spanList.getOrNull(oldSpanId)?.isShow = true
                 editText.visibility = View.GONE
                 showEditTextImm(false)
+
+                onAnswerChangedListener?.onAnswerChangedListener()
             }
         }
     }
@@ -651,5 +673,12 @@ class FillBlankTextView @JvmOverloads constructor(
         blankBackgroundOffsetTop = top
         blankBackgroundOffsetRight = right
         blankBackgroundOffsetBottom = bottom
+    }
+
+    /**
+     * 答案改变监听器
+     */
+    fun interface OnAnswerChangedListener{
+        fun onAnswerChangedListener()
     }
 }

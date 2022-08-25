@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
             this.blankEllipsize = TextUtils.TruncateAt.START
 //        this.blankBackground = getDrawable(R.drawable.bg_blank)
 //        this.setBlankBackgroundOffset(0, 10)
+            this.inputCompleteDelay = 1000
+            this.onAnswerChangedListener = FillBlankTextView.OnAnswerChangedListener{
+                Toast.makeText(this@MainActivity, "${fillBlankTextView.answerList}", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

@@ -92,6 +92,11 @@ class ReplaceSpan(val blankText: String) : ReplacementSpan() {
      */
     var onClickListener: OnClickListener? = null
 
+    /**
+     * 是否显示文本
+     */
+    var isShow = true
+
     override fun getSize(
         paint: Paint,
         text: CharSequence?,
@@ -141,10 +146,12 @@ class ReplaceSpan(val blankText: String) : ReplacementSpan() {
             background?.draw(canvas)
         }
 
-        val oldColor = paint.color
-        paint.color = textColor
-        canvas.drawText(ellipsize, 0, ellipsize.length, x + width, y.toFloat(), paint)
-        paint.color = oldColor
+        if (isShow) {
+            val oldColor = paint.color
+            paint.color = textColor
+            canvas.drawText(ellipsize, 0, ellipsize.length, x + width, y.toFloat(), paint)
+            paint.color = oldColor
+        }
 
     }
 
