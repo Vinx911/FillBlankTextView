@@ -233,7 +233,7 @@ class FillBlankTextView @JvmOverloads constructor(
     /**
      * 答案改变监听器
      */
-    var onAnswerChangedListener: OnAnswerChangedListener? = null
+    var answerChangeListener: AnswerChangeListener? = null
 
     /**
      * 处理点击事件
@@ -278,10 +278,18 @@ class FillBlankTextView @JvmOverloads constructor(
         }
     }
 
+    var blankClickListener: BlankClickListener? = null
+
     /**
      * span点击监听器
      */
-    private val spanOnClickListener = ReplaceSpan.OnClickListener { _, index, span ->
+    private val spanOnClickListener = ReplaceSpan.OnClickListener { v, index, span ->
+        // 拦截点击事件
+        if (blankClickListener != null) {
+            blankClickListener?.onBlankClicked(v, index)
+            return@OnClickListener
+        }
+
         val spanRect = getSpanRect(span) ?: return@OnClickListener
         val answer = editText.text.toString()
         setAnswer(oldSpanId, answer)
@@ -295,7 +303,7 @@ class FillBlankTextView @JvmOverloads constructor(
     }
 
     private val editInputRun = Runnable {
-        onAnswerChangedListener?.onAnswerChangedListener()
+        answerChangeListener?.onAnswerChanged()
     }
 
     init {
@@ -351,7 +359,7 @@ class FillBlankTextView @JvmOverloads constructor(
                 editText.visibility = View.GONE
                 showEditTextImm(false)
 
-                onAnswerChangedListener?.onAnswerChangedListener()
+                answerChangeListener?.onAnswerChanged()
             }
         }
     }
@@ -678,7 +686,16 @@ class FillBlankTextView @JvmOverloads constructor(
     /**
      * 答案改变监听器
      */
-    fun interface OnAnswerChangedListener{
-        fun onAnswerChangedListener()
+    fun interface AnswerChangeListener{
+        fun onAnswerChanged()
     }
+
+
+    /**
+     * 空点击监听器
+     */
+    fun interface BlankClickListener{
+        fun onBlankClicked(v: TextView, index: Int)
+    }
+
 }

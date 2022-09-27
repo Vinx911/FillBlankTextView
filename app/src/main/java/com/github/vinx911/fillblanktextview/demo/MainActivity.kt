@@ -12,6 +12,9 @@ import com.github.vinx911.FillBlankTextView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var fillBlankTextView: FillBlankTextView
+
+    var a = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,8 +43,13 @@ class MainActivity : AppCompatActivity() {
 //        this.blankBackground = getDrawable(R.drawable.bg_blank)
 //        this.setBlankBackgroundOffset(0, 10)
             this.inputCompleteDelay = 1000
-            this.onAnswerChangedListener = FillBlankTextView.OnAnswerChangedListener{
+            this.answerChangeListener = FillBlankTextView.AnswerChangeListener{
                 Toast.makeText(this@MainActivity, "${fillBlankTextView.answerList}", Toast.LENGTH_SHORT).show()
+            }
+
+            this.blankClickListener = FillBlankTextView.BlankClickListener { v, index ->
+                setAnswer(index, "答案 $a")
+                a++
             }
         }
 
